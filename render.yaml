@@ -1,8 +1,8 @@
 databases:
-  - name: configdb
+  - name: dpg-cqdakit6l47c73frqehg-a 
     plan: free
-    databaseName: config
-    user: config
+    databaseName: unique_gqab
+    user: unique_gqab_user
 
 services:
   - type: web
