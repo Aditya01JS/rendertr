@@ -1,0 +1,6 @@
+click==8.1.7
+colorama==0.4.6
+gunicorn==22.0.0
+h11==0.14.0
+packaging==24.1
+uvicorn==0.30.1
