@@ -36,7 +36,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 X_FRAME_OPTIONS = '*'
 CORS_ORIGIN_ALLOW_ALL = True
-CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000/']
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000/','https://freshzestjuice.netlify.app']
 
 # Application definition
 
