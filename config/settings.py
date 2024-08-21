@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 # Import dj-database-url at the beginning of the file.
 import dj_database_url
+
 from pathlib import Path
 # import django_heroku
 import cloudinary
@@ -19,6 +20,7 @@ import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -109,12 +111,22 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #     }
 # }
 
+# Host name - dpg-cr2pe0jv2p9s739b82d0-a
+# Data base - braindb100
+# User name - braindb_user
+# passkey - sukZeff1JTyQGbA5pkMNz7qDTLs6g7Px
+# internal db url - postgresql://braindb_user:sukZeff1JTyQGbA5pkMNz7qDTLs6g7Px@dpg-cr2pe0jv2p9s739b82d0-a/braindb100
+# external db url - postgresql://braindb_user:sukZeff1JTyQGbA5pkMNz7qDTLs6g7Px@dpg-cr2pe0jv2p9s739b82d0-a.oregon-postgres.render.com/braindb100
+# psql command - PGPASSWORD=sukZeff1JTyQGbA5pkMNz7qDTLs6g7Px psql -h dpg-cr2pe0jv2p9s739b82d0-a.oregon-postgres.render.com -U braindb_user braindb100
+
+
 # Local Database
 # Replace the SQLite DATABASES configuration with PostgreSQL:
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default='postgresql://unique_gqab_user:ism18OeCQiyj6t5LHCepO5ZrdxOfWCyU@dpg-cqdakit6l47c73frqehg-a.oregon-postgres.render.com/unique_gqab',
+        # postgresql://unique_gqab_user:ism18OeCQiyj6t5LHCepO5ZrdxOfWCyU@dpg-cqdakit6l47c73frqehg-a.oregon-postgres.render.com/unique_gqab`
+        default='postgresql://braindb_user:sukZeff1JTyQGbA5pkMNz7qDTLs6g7Px@dpg-cr2pe0jv2p9s739b82d0-a.oregon-postgres.render.com/braindb100',
         conn_max_age=600
     )
 }
@@ -192,3 +204,16 @@ cloudinary.config(
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
+
+
+
+
+
+
+# Host name - dpg-cr2pe0jv2p9s739b82d0-a
+# Data base - braindb100
+# User name - braindb_user
+# passkey - sukZeff1JTyQGbA5pkMNz7qDTLs6g7Px
+# internal db url - postgresql://braindb_user:sukZeff1JTyQGbA5pkMNz7qDTLs6g7Px@dpg-cr2pe0jv2p9s739b82d0-a/braindb100
+# external db url - postgresql://braindb_user:sukZeff1JTyQGbA5pkMNz7qDTLs6g7Px@dpg-cr2pe0jv2p9s739b82d0-a.oregon-postgres.render.com/braindb100
+# psql command - PGPASSWORD=sukZeff1JTyQGbA5pkMNz7qDTLs6g7Px psql -h dpg-cr2pe0jv2p9s739b82d0-a.oregon-postgres.render.com -U braindb_user braindb100
