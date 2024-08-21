@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 # Import dj-database-url at the beginning of the file.
 import dj_database_url
-
+import os
 from pathlib import Path
 # import django_heroku
 import cloudinary
@@ -122,11 +122,18 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Local Database
 # Replace the SQLite DATABASES configuration with PostgreSQL:
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         # Replace this value with your local database's connection string.
+#         # postgresql://unique_gqab_user:ism18OeCQiyj6t5LHCepO5ZrdxOfWCyU@dpg-cqdakit6l47c73frqehg-a.oregon-postgres.render.com/unique_gqab`
+#         default='postgresql://braindb_user:sukZeff1JTyQGbA5pkMNz7qDTLs6g7Px@dpg-cr2pe0jv2p9s739b82d0-a.oregon-postgres.render.com/braindb100',
+#         conn_max_age=600
+#     )
+# }
+
 DATABASES = {
     'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        # postgresql://unique_gqab_user:ism18OeCQiyj6t5LHCepO5ZrdxOfWCyU@dpg-cqdakit6l47c73frqehg-a.oregon-postgres.render.com/unique_gqab`
-        default='postgresql://braindb_user:sukZeff1JTyQGbA5pkMNz7qDTLs6g7Px@dpg-cr2pe0jv2p9s739b82d0-a.oregon-postgres.render.com/braindb100',
+        default=os.environ.get('DATABASE_URL'),
         conn_max_age=600
     )
 }
